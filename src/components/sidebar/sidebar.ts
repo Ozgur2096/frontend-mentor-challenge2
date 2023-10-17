@@ -1,11 +1,12 @@
 // create main sidebar
 import './sidebar.css';
 
-export const createSidebar = (stepsArray: string[]) => {
+export const createSidebar = (stepElements: Element[]) => {
   const element = document.createElement('aside');
 
   element.classList.add('sidebar');
-  element.innerHTML = `${stepsArray.join('')}`;
+
+  stepElements.forEach(stepElement => element.appendChild(stepElement));
 
   return element;
 };

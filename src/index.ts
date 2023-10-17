@@ -1,18 +1,11 @@
 import './index.css';
 import { createSidebar } from './components/sidebar/sidebar';
-
-const dummyArray = [
-  '<div>a</div>',
-  '<div>b</div>',
-  '<div>c</div>',
-  '<div>d</div>',
-  '<div>e</div>',
-];
+import { stepElements } from './components/sidebarSubcomponents/sidebarSubcomponents';
 
 const container = document.getElementById('container');
 
 container?.classList.add('container');
 
-const sidebar = createSidebar(dummyArray);
+const sidebar = createSidebar(stepElements);
 
 container?.appendChild(sidebar);
