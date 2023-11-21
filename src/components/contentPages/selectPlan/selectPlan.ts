@@ -1,14 +1,14 @@
 import { MainContent } from '../templates/contentTemplate';
 
 class SelectPlan extends MainContent {
-  constructor() {
-    super();
-    this.contentSection.innerHTML = `
-    <div style="color:black">Select Plan Main</div>
-    `;
+  constructor(private title: string, infoText: string) {
+    super(title, infoText);
   }
 }
 
 export const createSelectPlan = () => {
-  return new SelectPlan();
+  return new SelectPlan(
+    'Select your plan',
+    'You have the option of monthly or yearly billing.'
+  );
 };

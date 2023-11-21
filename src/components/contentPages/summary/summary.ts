@@ -1,14 +1,14 @@
 import { MainContent } from '../templates/contentTemplate';
 
 class Summary extends MainContent {
-  constructor() {
-    super();
-    this.contentSection.innerHTML = `
-    <div style="color:black">Summary Main</div>
-    `;
+  constructor(private title: string, infoText: string) {
+    super(title, infoText);
   }
 }
 
 export const createSummary = () => {
-  return new Summary();
+  return new Summary(
+    'Finishing up',
+    'Double-check everything looks OK before confirming.'
+  );
 };

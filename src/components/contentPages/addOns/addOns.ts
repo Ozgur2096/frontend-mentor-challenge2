@@ -1,14 +1,14 @@
 import { MainContent } from '../templates/contentTemplate';
 
 class AddOns extends MainContent {
-  constructor() {
-    super();
-    this.contentSection.innerHTML = `
-    <div style="color:black">Add-ons Main</div>
-    `;
+  constructor(private title: string, private infoText: string) {
+    super(title, infoText);
   }
 }
 
 export const createAddOns = () => {
-  return new AddOns();
+  return new AddOns(
+    'Pick add-ons',
+    'Add-ons help enhance your gaming experience.'
+  );
 };

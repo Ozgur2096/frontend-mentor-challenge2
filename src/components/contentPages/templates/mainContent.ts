@@ -15,7 +15,7 @@ const contentPages: HTMLElement[] = [
 ];
 
 export const createMainContent = () => {
-  const element = contentPages[0] as HTMLElement;
+  const element = contentPages[3] as HTMLElement;
 
   return element;
 };
