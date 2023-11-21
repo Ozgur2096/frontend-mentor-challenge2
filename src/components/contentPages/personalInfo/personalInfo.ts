@@ -4,7 +4,7 @@ class PersonalInfo extends MainContent {
   constructor() {
     super();
     this.contentSection.innerHTML = `
-    <div style="color:black">hiiiiiiiiiiii</div>
+    <div style="color:black">Personal Info Main</div>
     `;
   }
 }
