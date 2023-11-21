@@ -10,8 +10,8 @@ export class Step {
     this.element = document.createElement('div');
     this.element.innerHTML = `
     <div>${this.stepNumber}</div>
-    <div>${this.stepNumberText}</div>
-    <div>${this.title}</div>
+    <div>${this.stepNumberText.toUpperCase()}</div>
+    <div>${this.title.toUpperCase()}</div>
     `;
     this.element.classList.add(stepClassName);
   }
