@@ -1,14 +1,25 @@
-export function useStateManagement<T>(initialState: T) {
-  let state = initialState;
+type State<T> = [T, (newValue: T) => void];
+
+export function useStateManagement<T>(initialValue: T): State<T> {
+  let state: T = initialValue;
+  const listeners: Array<(value: T) => void> = [];
 
   const setState = (newValue: T) => {
     state = newValue;
-    return state;
+    listeners.forEach(listener => listener(state));
   };
 
-  type SetterFn = (newValue: T) => T;
+  const getState = (): T => state;
 
-  const useState: [T, SetterFn] = [state, setState];
+  const subscribe = (listener: (value: T) => void) => {
+    listeners.push(listener);
+    return () => {
+      const index = listeners.indexOf(listener);
+      if (index !== -1) {
+        listeners.splice(index, 1);
+      }
+    };
+  };
 
-  return useState;
+  return [getState(), setState];
 }
