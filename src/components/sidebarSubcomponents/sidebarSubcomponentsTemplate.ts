@@ -1,5 +1,5 @@
 export class Step {
-  public element: Element;
+  public element: HTMLElement;
 
   constructor(
     private stepNumber: number,

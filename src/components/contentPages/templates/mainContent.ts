@@ -14,8 +14,8 @@ const contentPages: HTMLElement[] = [
   summarySection.element,
 ];
 
-export const createMainContent = () => {
-  const element = contentPages[3] as HTMLElement;
+export const createMainContent = (contentPageIndex: string) => {
+  const element = contentPages[+contentPageIndex] as HTMLElement;
 
   return element;
 };
