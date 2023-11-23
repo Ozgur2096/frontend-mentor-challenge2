@@ -5,16 +5,18 @@ import { stepElements } from './components/sidebarSubcomponents/sidebarSubcompon
 // import { createPersonalInfo } from './components/contentPages/personalInfo/personalInfo';
 import { createMainContent } from './components/contentPages/templates/mainContent';
 
-function createAndRenderPage() {
+const sidebar = createSidebar(stepElements);
+
+export function createAndRenderPage(pageIndex: string) {
   const container = document.getElementById('container');
 
   container?.classList.add('container');
 
-  const sidebar = createSidebar(stepElements);
-  const mainContent = createMainContent('0');
+  const mainContent = createMainContent(pageIndex);
 
+  container!.innerHTML = '';
   container?.appendChild(sidebar);
   container?.appendChild(mainContent);
 }
 
-createAndRenderPage();
+createAndRenderPage('0');
