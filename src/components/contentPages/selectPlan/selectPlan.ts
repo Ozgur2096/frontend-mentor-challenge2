@@ -2,7 +2,7 @@ import { MainContent } from '../templates/contentTemplate';
 
 class SelectPlan extends MainContent {
   constructor(private title: string, infoText: string) {
-    super(title, infoText);
+    super(title, infoText, true, true);
   }
 }
 

@@ -2,7 +2,7 @@ import { MainContent } from '../templates/contentTemplate';
 
 class AddOns extends MainContent {
   constructor(private title: string, private infoText: string) {
-    super(title, infoText);
+    super(title, infoText, true, true);
   }
 }
 
