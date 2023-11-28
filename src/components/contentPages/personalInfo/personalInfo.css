@@ -1,0 +1,8 @@
+.personal-info {
+  color: var(--marine-blue);
+}
+
+.personal-info-input-section {
+  display: flex;
+  flex-direction: column;
+}
