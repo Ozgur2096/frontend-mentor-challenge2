@@ -1,0 +1,12 @@
+.summary {
+  color: var(--marine-blue);
+}
+
+.summary-price-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.confirm-button {
+  background-color: var(--purplish-blue);
+}
