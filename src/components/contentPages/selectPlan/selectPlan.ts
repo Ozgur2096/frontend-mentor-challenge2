@@ -1,3 +1,4 @@
+import './selectPlan.css';
 import { MainContent } from '../templates/contentTemplate';
 
 class SelectPlan extends MainContent {

@@ -1,3 +1,4 @@
+import './addOns.css';
 import { MainContent } from '../templates/contentTemplate';
 
 class AddOns extends MainContent {

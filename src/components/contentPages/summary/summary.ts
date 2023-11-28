@@ -1,3 +1,4 @@
+import './summary.css';
 import { MainContent } from '../templates/contentTemplate';
 
 class Summary extends MainContent {
