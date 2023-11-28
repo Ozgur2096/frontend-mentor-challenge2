@@ -17,7 +17,7 @@ class SelectPlan extends MainContent {
       <span>Yearly</span>
     </div>
     `;
-    contentSectionSelectPlan.classList.add('personal-info');
+    contentSectionSelectPlan.classList.add('select-plan');
     this.contentSection.appendChild(contentSectionSelectPlan);
   }
 }
