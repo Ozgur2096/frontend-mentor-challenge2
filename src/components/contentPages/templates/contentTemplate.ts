@@ -1,5 +1,8 @@
-let pageIndex: number = 0;
 import { createAndRenderPage } from '../../../index';
+import {
+  managePageContentIndex,
+  pageContent,
+} from '../../../util/managePageContentIndex';
 
 export class MainContent {
   public element: HTMLElement;
@@ -27,15 +30,15 @@ export class MainContent {
 
     // button section
     function goBack() {
-      pageIndex--;
-      createAndRenderPage(pageIndex.toString());
-      console.log(pageIndex);
+      pageContent.index--;
+      createAndRenderPage(pageContent.index.toString());
+      console.log(pageContent.index);
     }
 
     function nextStep() {
-      pageIndex++;
-      createAndRenderPage(pageIndex.toString());
-      console.log(pageIndex);
+      pageContent.index++;
+      createAndRenderPage(pageContent.index.toString());
+      console.log(pageContent.index);
     }
 
     if (showGoBackButton) {

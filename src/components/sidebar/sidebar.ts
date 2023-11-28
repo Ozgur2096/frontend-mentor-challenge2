@@ -1,6 +1,7 @@
 // create main sidebar
 import './sidebar.css';
 import { createAndRenderPage } from '../../index';
+import { managePageContentIndex } from '../../util/managePageContentIndex';
 
 export const createSidebar = (stepElements: HTMLElement[]) => {
   const element = document.createElement('aside');
@@ -9,6 +10,7 @@ export const createSidebar = (stepElements: HTMLElement[]) => {
   function handleStepElementClick(event: Event) {
     const target = event.currentTarget as HTMLElement;
     console.log(target.id);
+    managePageContentIndex(+target.id);
     createAndRenderPage(target.id);
   }
 
