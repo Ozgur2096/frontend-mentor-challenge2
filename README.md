@@ -1,5 +1,7 @@
 # Frontend Mentor - Multi-step form
 
+I will not continue this project with React but I keep this repository for some code examples.
+
 ![Design preview for the Multi-step form coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
