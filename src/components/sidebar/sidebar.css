@@ -19,3 +19,8 @@
   border: solid 1px white;
   border-radius: 50%;
 }
+
+.sidebar-step-number-active {
+  color: var(--marine-blue);
+  background-color: var(--light-blue);
+}

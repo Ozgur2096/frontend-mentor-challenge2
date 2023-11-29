@@ -1,7 +1,10 @@
 // create main sidebar
 import './sidebar.css';
 import { createAndRenderPage } from '../../index';
-import { managePageContentIndex } from '../../util/managePageContentIndex';
+import {
+  managePageContentIndex,
+  pageContent,
+} from '../../util/managePageContentIndex';
 
 export const createSidebar = (stepElements: HTMLElement[]) => {
   const element = document.createElement('aside');
